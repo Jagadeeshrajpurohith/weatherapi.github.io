@@ -87,10 +87,10 @@ console.log(submit);
 submit.addEventListener("click",(e)=>{
     let value = search.value;
     e.preventDefault();    
-console.log("clicked")  ;  
+// console.log("clicked")  ;  
 
 let link = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/'+value+'?unitGroup=metric&include=days&key=GBCBEUJ9TCBS4NKGE322NBP4S&contentType=json';
-console.log(link)
+// console.log(link)
 
 fetch(link, {
   "method": "GET",
@@ -154,7 +154,7 @@ fetch(link, {
     desc6.innerHTML=data.days[6].conditions;
     desc7.innerHTML=data.days[7].conditions;
 
-    console.log(date)
+//     console.log(data)
     // date.innerText=data.days[1].datetime;
     // date.innerHTML=data.days[2].datetime;
     // date.innerHTML=data.days[3].datetime;
@@ -164,7 +164,7 @@ fetch(link, {
     // date.innerHTML=data.days[7].datetime;
 
     
-    console.log(data);
+//     console.log(data);
 })
 .catch(err => {
   console.error(err);
