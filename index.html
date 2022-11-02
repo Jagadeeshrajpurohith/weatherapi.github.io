@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- navigation bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://bit.ly/3ytFLSi" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" >
+            Weather
+          </a>
+          
+        </div>
+      </nav>
+      <div class="searchtag">
+        <form class="d-flex searchform" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
+            <button class="btn btn-success" type="submit" id="submit">Search</button>
+          </form>
+      </div>
+
+      <main>
+        <div class="weather text-white">
+            <h2 id="city">Delhi, IN</h2>
+            <div class="temp-box">
+                <img src="https://bit.ly/3T85yYh" alt="" id="mainimg">
+                <p id="temp"></p><p> °C</p>
+            </div>
+            <span id="clouds">Broken Clouds</span>
+        </div>
+        <div class="divider1"></div>
+        <div class="forecast text-pink">
+            <p class="cast-header">Current Weather</p>
+            <div class="temp-list">
+                <div class="next">
+
+
+
+
+                    
+
+
+                    <div class="card" style="width: 23rem;">
+                        <div class="card-body">
+                        <h5 class="card-title" style="margin-left:5rem; color: chocolate;">Weather Report</h5>
+                        <p>Condition :- <span id="conditions"></span></p>
+                        <p>Description :- <span id="description"></span></p>
+                        <p>Wind speed :- <span id="windspeed"></span> <i class="fa-solid fa-wind"></i></p>
+                        </span>
+                        
+                        <p>Maximum Temperature :- <span id="maxtemp"></span><span>°C</span></p>
+                        
+                        <p>Minimum Temperature :- <span id="mintemp"></span><span>°C</span></p>
+                        <p>UVindex :- <span id="uvindex"></span></p>
+                        <p>pressure :- <span id="pressure"></span></p>
+                        <p>Humidity :- <span id="humidity"></span></p>
+                        <div class="getmoreinfo"><a href="#" class="btn btn-primary">Get More Info</a></div>
+                          <!-- <a href="#" class="btn btn-primary">Get More Info</a> -->
+                        </div>
+                      </div>
+
+
+
+
+
+                    <!-- <div>
+                        <p class="time">8:30 PM</p>
+                        <p>26 °C / 25 °C</p>
+
+                    </div>
+                    <p class="dec">Light Rain</p>
+                </div>
+                <div class="next">
+                    <div>
+                        <p class="time">8:30 PM</p>
+                        <p>26 °C / 25 °C</p>
+
+                    </div>
+                    <p class="dec">Light Rain</p>
+                </div>
+                <div class="next">
+                    <div>
+                        <p class="time">8:30 PM</p>
+                        <p>26 °C / 25 °C</p>
+
+                    </div>
+                    <p class="dec">Light Rain</p>
+                </div>
+                <div class="next">
+                    <div>
+                        <p class="time">8:30 PM</p>
+                        <p>26 °C / 25 °C</p>
+
+                    </div>
+                    <p class="dec">Light Rain</p>
+                </div>
+                <div class="next">
+                    <div>
+                        <p class="time">8:30 PM</p>
+                        <p>26 °C / 25 °C</p>
+
+                    </div>
+                    <p class="dec">Light Rain</p>
+                </div>
+            </div> -->
+        </div>
+      </main>
+
+      <div class="forcastdates">
+        <div class="divider2"></div>
+        <p class="cast-header">Next 7 Days Forecast</p>
+        <div class="weekf">
+            <div class="dayf ">
+                <p id="date1" style="color:rgb(0, 255, 0); margin-left: 0.5rem; font-weight: bolder;">
+
+                    Sun Oct 10 2022
+                </p>
+                <p>max temp :- <span id="forecastday1maxtemp">31 °C</span></p><p>min temp :- <span id="forecastday1mintemp">29 °C</span></p>
+                <p id="desc1">Overcast  Clouds</p> 
+            </div>
+
+            <div class="dayf ">
+                <p id="date2" style="color:rgb(0, 255, 0); margin-left: 0.5rem; font-weight:bolder">
+                    Sun Oct 10 2022
+                </p>
+                <p>max temp :-<span id="forecastday2maxtemp">31 °C</span> </p><p>min temp :- <span id="forecastday2mintemp">29 °C</span></p><p id="desc2">Overcast  Clouds</p> 
+            </div>
+
+            <div class="dayf ">
+                <p id="date3" style="color:rgb(0, 255, 0); margin-left: 0.5rem; font-weight: bolder">
+                    Sun Oct 10 2022
+                </p>
+                <p>max temp :-<span id="forecastday3maxtemp">31 °C</span> </p><p>min temp :- <span id="forecastday3mintemp">29 °C</span></p><p id="desc3">Overcast  Clouds</p> 
+            </div>
+
+            <div class="dayf ">
+                <p id="date4" style="color:rgb(0, 255, 0); margin-left: 0.5rem; font-weight: bolder">
+                    Sun Oct 10 2022
+                </p>
+                <p>max temp :-<span id="forecastday4maxtemp">31 °C</span> </p><p>min temp :- <span id="forecastday4mintemp">29 °C</span></p><p id="desc4">Overcast  Clouds</p> 
+            </div>
+
+            <div class="dayf ">
+                <p id="date5" style="color:rgb(0, 255, 0); margin-left: 0.5rem; font-weight: bolder">
+                    Sun Oct 10 2022
+                </p>
+                <p>max temp :-<span id="forecastday5maxtemp">31 °C</span> </p><p>min temp :- <span id="forecastday5mintemp">29 °C</span></p><p id="desc5">Overcast  Clouds</p> 
+            </div>
+
+            <div class="dayf ">
+                <p id="date6" style="color:rgb(0, 255, 0); margin-left: 0.5rem; font-weight: bolder">
+                    Sun Oct 10 2022
+                </p>
+                <p>max temp :-<span id="forecastday6maxtemp">31 °C</span> </p><p>min temp :- <span id="forecastday6mintemp">29 °C</span></p><p id="desc6">Overcast  Clouds</p> 
+            </div>
+
+            <div class="dayf ">
+                <p id="date7" style="color:rgb(0, 255, 0); margin-left: 0.5rem; font-weight: bolder">
+                    Sun Oct 10 2022
+                </p>
+                <p>max temp :-<span id="forecastday7maxtemp">31 °C</span> </p><p>min temp :- <span id="forecastday7mintemp">29  <span>°C</span></span></p><p id="desc7">Overcast  Clouds</p> 
+            </div>  
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+</html>
